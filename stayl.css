@@ -1,0 +1,167 @@
+body {
+  background-image: url("ddd.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 0 50px;
+}
+
+.divajouter {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+button {
+  cursor: pointer;
+}
+
+.Ajouter {
+  background-color: whitesmoke;
+
+  display: grid;
+  text-align: center;
+  width: 29%;
+  padding: 1rem;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+label {
+  margin-top: 15px;
+}
+.Ajouter button {
+  width: 180px;
+  height: 36px;
+}
+.divajouter button {
+  background-color: #4988c4;
+  border-radius: 5px;
+  border: 3px;
+  margin: 3rem 0 2rem 0;
+}
+h1 {
+  background-color: #70a6d4;
+  border-radius: 3px;
+  text-align: center;
+  height: 3rem;
+  border: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+.tablelist {
+  display: grid;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+.search{
+  display: flex;
+  align-items: start;
+  width: 389px;
+  margin: 15px;
+  position: relative;
+}
+.search input{
+  width: 100%;
+  padding-left: 38px;
+}
+.search img{
+  position: absolute;
+  top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+  width: 16px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+th,
+td {
+  border: 1px solid;
+  padding: 8px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+.show {
+  display: block;
+}
+.supri {
+  background-color: #f63049;
+  border: 1px solid;
+  border-radius: 3px;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Ajouter {
+    width: 40%;
+  }
+}
+
+select,
+textarea {
+  width: 49%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+textarea {
+  resize: none;
+  height: 70px;
+}
+.tablelist.nomber{
+  
+}
+
