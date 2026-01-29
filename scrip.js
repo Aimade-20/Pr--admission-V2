@@ -7,6 +7,7 @@ let MotifEl = document.getElementById("Motif");
 let dateEl = document.getElementById("date");
 let tbody = document.getElementById("table");
 
+contentDeme();
 
 function ajouter() {
   let ajout = {
@@ -32,7 +33,7 @@ function ajouter() {
     hide();
   } else {
     array.push(ajout);
-    
+
     para.textContent = "Demande ajoutée avec succès";
     para.className = "success";
     para.classList.add("show");
@@ -50,37 +51,38 @@ function afichTable(data = array) {
 
   if (!data.length) {
     tbody.innerHTML = `
-      <tr>
-        <td colspan="7" style="text-align:center; padding:30px;">
-          Aucun résultat
+    <tr>
+    <td colspan="7" style="text-align:center; padding:30px;">
+    Aucun résultat
         </td>
-      </tr>
-    `;
+        </tr>
+        `;
     return;
   }
 
   data.forEach((item, index) => {
     let tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${item.nome}</td>
-      <td>${item.prenom}</td>
-      <td>${item.telephon}</td>
-      <td>${item.Email}</td>
-      <td>${item.Motif}</td>
-      <td>${item.date}</td>
-      <td>
+        <td>${item.nome}</td>
+        <td>${item.prenom}</td>
+        <td>${item.telephon}</td>
+        <td>${item.Email}</td>
+        <td>${item.Motif}</td>
+        <td>${item.date}</td>
+        <td>
         <button class="supri" onclick="suprimerBut(${index})">
-          supprimer
+        supprimer
         </button>
-      </td>
-    `;
+        </td>
+        `;
     tbody.appendChild(tr);
   });
-  contentDeme ()
+  contentDeme();
 }
 function suprimerBut(index) {
   array.splice(index, 1);
   afichTable();
+  contentDeme();
 }
 
 function hide() {
@@ -89,33 +91,31 @@ function hide() {
   }, 3000);
 }
 
-
 function searchFilter() {
   const vall = document.getElementById("search").value.toLowerCase();
   if (!vall) {
-  afichTable(array);
-  return;
-}
+    afichTable(array);
+    return;
+  }
   const fil = array.filter(
     (item) =>
       item.nome.toLowerCase().includes(vall) ||
       item.prenom.toLowerCase().includes(vall) ||
       item.telephon.includes(vall) ||
-      item.Email.toLowerCase().includes(vall),
+      item.Email.toLowerCase().includes(vall)
   );
 
-  
   afichTable(fil);
 }
-document
-  .getElementById("search")
-  .addEventListener("input", searchFilter);
- 
-  function contentDeme (){
-      document.getElementById("nomber");
-      array.length +"demend au total"
+document.getElementById("search").addEventListener("input", searchFilter);
 
+function contentDeme() {
+  const total = array.length;
+  const length = document.getElementById("nomber");
+  console.log(total);
+  if (array.length == "") {
+    length.textContent = `Aucune Demandes.`;
+    return;
   }
-
-  
-
+  length.textContent = `${total} Demandes au total.`;
+}

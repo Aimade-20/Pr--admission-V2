@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="stayl.css" />
   </head>
   <body>
+    <div class="pre-admi">
+      <h1>Pré-admission V2</h1>
+    </div>
+
     <form action="#" class="form-container">
-      <h1>
-        Pré-admission
-        <p>V2</p>
-      </h1>
       <div class="divajouter">
         <div class="Ajouter">
           <div id="messag"></div>
@@ -47,32 +47,40 @@
             <label for="date">Date des Souhaiter :</label>
             <input type="date" id="date" />
           </div>
-
-          <button id="ajouter">Ajeuter</button>
+          <div class="div-ajouter">
+            <button id="ajouter">Ajeuter</button>
+          </div>
         </div>
       </div>
     </form>
-    <h1>Liste des Demandes</h1>
+    <div class="list-demand">
+      <h1>Liste des Demandes</h1>
+    </div>
+
     <div class="tablelist">
       <div class="search">
-        <img src="search.png" alt="" />
-        <input type="search" id="search" placeholder="search" />
-      </div >
-      <div id=" nomber" class="nomber"></div>
-      <table>
-        <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Prénome</th>
-            <th>Téléphone</th>
-            <th>Email</th>
-            <th>Motif</th>
-            <th>Date</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="table"></tbody>
-      </table>
+        <div class="search-inp">
+          <img src="search.png" alt="" />
+          <input type="search" id="search" placeholder="search" />
+        </div>
+        <div id="nomber" class="nomber"></div>
+      </div>
+      <div class="search-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénome</th>
+              <th>Téléphone</th>
+              <th>Email</th>
+              <th>Motif</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="table"></tbody>
+        </table>
+      </div>
     </div>
     <script src="scrip.js"></script>
   </body>
