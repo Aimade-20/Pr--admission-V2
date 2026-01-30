@@ -8,7 +8,7 @@ let dateEl = document.getElementById("date");
 let tbody = document.getElementById("table");
 
 contentDeme();
-
+// ajouter
 function ajouter() {
   let ajout = {
     nome: nomeEl.value,
@@ -45,7 +45,7 @@ function ajouter() {
 afichTable();
 const ajouterbtn = document.querySelector("#ajouter");
 ajouterbtn.addEventListener("click", () => ajouter());
-
+// afichTable
 function afichTable(data = array) {
   tbody.innerHTML = "";
 
@@ -79,6 +79,7 @@ function afichTable(data = array) {
   });
   contentDeme();
 }
+// suprime
 function suprimerBut(index) {
   array.splice(index, 1);
   afichTable();
@@ -90,7 +91,7 @@ function hide() {
     document.getElementById("messag").classList.remove("show");
   }, 3000);
 }
-
+ search
 function searchFilter() {
   const vall = document.getElementById("search").value.toLowerCase();
   if (!vall) {
