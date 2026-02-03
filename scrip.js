@@ -91,7 +91,7 @@ function hide() {
     document.getElementById("messag").classList.remove("show");
   }, 3000);
 }
- search
+//  search
 function searchFilter() {
   const vall = document.getElementById("search").value.toLowerCase();
   if (!vall) {
@@ -102,7 +102,7 @@ function searchFilter() {
     (item) =>
       item.nome.toLowerCase().includes(vall) ||
       item.prenom.toLowerCase().includes(vall) ||
-      item.telephon.includes(vall) ||
+      item.telephon.toString().includes(vall) ||
       item.Email.toLowerCase().includes(vall)
   );
 
